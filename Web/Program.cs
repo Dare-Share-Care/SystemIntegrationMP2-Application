@@ -23,6 +23,7 @@ builder.Services.AddCors(options =>
 //RabbitMQ Producers
 builder.Services.AddSingleton<CamundaTaskProducer>();
 builder.Services.AddSingleton<CamundaExternalTaskProducer>();
+builder.Services.AddSingleton<EmailProducer>();
 
 var app = builder.Build();
 
