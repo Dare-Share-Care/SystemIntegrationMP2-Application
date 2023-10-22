@@ -7,7 +7,7 @@
 
 - **Julius Krüger Madsen**: cph-jm352@cphbusiness.dk
 
-
+The goal of this project was to implement a Customer Complaint Handler using Camunda BPM and EIP. 
 This project provides a simple implementation of RabbitMQ producers for sending messages related to Camunda tasks and emails. The producers are designed to serialize the messages into JSON format and send them to specific RabbitMQ queues.
 
 - [CamundaExternalTask](https://github.com/Dare-Share-Care/SystemIntegrationMP2-CamundaExternalTasks)
