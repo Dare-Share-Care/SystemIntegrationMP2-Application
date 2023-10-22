@@ -1,5 +1,5 @@
 using Microsoft.AspNetCore.Mvc;
-using Web.Models.Dtos;
+using Web.Models.Dtos.Camunda;
 using RabbitMQ.Producers;
 
 namespace Web.Controllers;

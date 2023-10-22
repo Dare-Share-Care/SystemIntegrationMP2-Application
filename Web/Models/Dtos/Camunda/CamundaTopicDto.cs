@@ -1,6 +1,6 @@
 using System.Text.Json.Serialization;
 
-namespace Web.Models.Dtos;
+namespace Web.Models.Dtos.Camunda;
 
 public class CamundaTopicDto
 {
