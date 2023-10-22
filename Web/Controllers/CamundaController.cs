@@ -27,9 +27,9 @@ public CamundaController(CamundaTaskProducer taskProducer, CamundaExternalTaskPr
     
     [HttpPost]
     [Route("external-task/complete")]
-    public IActionResult CompleteExternalTask([FromBody] CompleteCamundaTaskDto dto)
+    public IActionResult CompleteExternalTask([FromBody] CompleteCamundaExternalTaskDto dto)
     {
-        _taskProducer.SendMessage(dto);
-        return Ok(new { id = dto.Id });
+        _externalTaskProducer.SendMessage(dto);
+        return Ok(new { topic = dto.Topic });
     }
 }
