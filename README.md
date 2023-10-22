@@ -16,7 +16,6 @@ The application makes use of several microservices, these services can be found 
 - [CamundaTasks](https://github.com/Dare-Share-Care/SystemIntegrationMP2-CamundaTasks)
 - [EmailService](https://github.com/Dare-Share-Care/SystemIntegrationMP2-EmailService)
 
-Each producer has a SendMessage<T> method that takes a message of type T, serializes it to JSON, and sends it to the respective RabbitMQ queue.
 
 ## Controllers
 CamundaController: Provides endpoints to complete Camunda tasks and external tasks. Uses the above producers to send messages.
