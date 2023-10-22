@@ -1,4 +1,9 @@
 # SystemIntegrationMP2-Application
+## Authors
+
+- Frederik Andersen
+- Janus Rasmussen
+- Julius Krüger
 
 This project provides a simple implementation of RabbitMQ producers for sending messages related to Camunda tasks and emails. The producers are designed to serialize the messages into JSON format and send them to specific RabbitMQ queues.
 
@@ -16,14 +21,10 @@ CamundaController: Provides endpoints to complete Camunda tasks and external tas
 EmailController: Provides an endpoint to send emails. Uses the EmailProducer to send messages.
 
 ## API Endpoints
-CamundaController:
-- POST /task/complete: Completes a Camunda task.
-- POST /external-task/complete: Completes a Camunda external task.
-
-EmailController:
-- POST /send: Sends an email.
 ![Swagger](https://github.com/Dare-Share-Care/SystemIntegrationMP2-Application/blob/main/Docs/swagger.png)
 
 ## Camunda BPM Model
+![BPM](https://github.com/Dare-Share-Care/SystemIntegrationMP2-Application/blob/main/Docs/CustomerComplains.png)
 
 ## EIP Implementation
+We have used camunda to model our business process, and then The RabbitMQ queues (camundaExternalTask, camundaTask, and emailsQueue) act as Message Channels. These channels allow our systems to communicate with each other by sending and receiving messages.
