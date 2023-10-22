@@ -18,4 +18,9 @@
       <ProjectReference Include="..\RabbitMQ\RabbitMQ.csproj" />
     </ItemGroup>
 
+
+    <ItemGroup>
+      <Folder Include="Resources\Forms\" />
+    </ItemGroup>
+
 </Project>
