@@ -8,7 +8,7 @@
 - **Julius Krüger Madsen**: cph-jm352@cphbusiness.dk
 
 ## The Application
-This application is program meant for processing and handling customer complaints.
+This application is a program meant for processing and handling customer complaints.
 
 The application makes use of several microservices, these services can be found here:
 
