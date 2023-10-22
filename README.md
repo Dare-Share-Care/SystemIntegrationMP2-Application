@@ -7,8 +7,10 @@
 
 - **Julius Krüger Madsen**: cph-jm352@cphbusiness.dk
 
-The goal of this project was to implement a Customer Complaint Handler using Camunda BPM and EIP. 
-This project provides a simple implementation of RabbitMQ producers for sending messages related to Camunda tasks and emails. The producers are designed to serialize the messages into JSON format and send them to specific RabbitMQ queues.
+## The Application
+This application is program meant for processing and handling customer complaints.
+
+The application makes use of several microservices, these services can be found here:
 
 - [CamundaExternalTask](https://github.com/Dare-Share-Care/SystemIntegrationMP2-CamundaExternalTasks)
 Sends messages to the camundaExternalTask queue.
@@ -31,3 +33,8 @@ EmailController: Provides an endpoint to send emails. Uses the EmailProducer to 
 
 ## EIP Implementation
 We have used camunda to model our business process, and then The RabbitMQ queues (camundaExternalTask, camundaTask, and emailsQueue) act as Message Channels. These channels allow our systems to communicate with each other by sending and receiving messages.
+- Process Manager
+  We have used camunda to model our business process. When deployed, tasks are then completed using CamundaAPI implemented as seperate services.
+
+- Producer/Subscriber
+  We use rabbit as our Message Broker. This allows us to integrate services using message queues by forwarding and accepting messages between the producer and subscriber applications
