@@ -22,3 +22,8 @@ CamundaController:
 
 EmailController:
 - POST /send: Sends an email.
+[Swagger](https://github.com/Dare-Share-Care/SystemIntegrationMP2-Application/blob/main/Docs/swagger.png)
+
+## Camunda BPM Model
+
+## EIP Implementation
