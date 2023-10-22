@@ -17,8 +17,8 @@ EmailController: Provides an endpoint to send emails. Uses the EmailProducer to 
 
 ## API Endpoints
 CamundaController:
-    POST /task/complete: Completes a Camunda task.
-    POST /external-task/complete: Completes a Camunda external task.
+- POST /task/complete: Completes a Camunda task.
+- POST /external-task/complete: Completes a Camunda external task.
 
 EmailController:
-    POST /send: Sends an email.
+- POST /send: Sends an email.
