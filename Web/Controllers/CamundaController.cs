@@ -1,6 +1,7 @@
 using Microsoft.AspNetCore.Mvc;
 using RabbitMQ.Implementations;
 using Web.Models.Dtos;
+using RabbitMQ.Producers;
 
 namespace Web.Controllers;
 
@@ -8,18 +9,28 @@ namespace Web.Controllers;
 [Route("[controller]")]
 public class CamundaController : ControllerBase
 {
-    private readonly IMessageProducer _messageProducer;
+    private readonly CamundaTaskProducer _taskProducer;
+    private readonly CamundaExternalTaskProducer _externalTaskProducer;
     
-public CamundaController(IMessageProducer messageProducer)
-    {
-        _messageProducer = messageProducer;
-    }
+public CamundaController(CamundaTaskProducer taskProducer, CamundaExternalTaskProducer externalTaskProducer)
+{
+    _taskProducer = taskProducer;
+    _externalTaskProducer = externalTaskProducer;
+}
 
     [HttpPost]
     [Route("task/complete")]
-    public IActionResult Post([FromBody] CompleteCamundaTaskDto dto)
+    public IActionResult CompleteTask([FromBody] CompleteCamundaTaskDto dto)
     {
-        _messageProducer.SendMessage(dto);
+        _taskProducer.SendMessage(dto);
+        return Ok(new { id = dto.Id });
+    }
+    
+    [HttpPost]
+    [Route("external-task/complete")]
+    public IActionResult CompleteExternalTask([FromBody] CompleteCamundaTaskDto dto)
+    {
+        _taskProducer.SendMessage(dto);
         return Ok(new { id = dto.Id });
     }
 }

@@ -4,7 +4,7 @@ using RabbitMQ.Client;
 
 namespace RabbitMQ.Implementations;
 
-public class CamundaProducer : IMessageProducer
+public class CamundaTaskProducer
 {
     public void SendMessage<T>(T message)
     {
@@ -14,6 +14,6 @@ public class CamundaProducer : IMessageProducer
         var json = JsonSerializer.Serialize(message);
         var body = Encoding.UTF8.GetBytes(json);
 
-        channel.BasicPublish(exchange: "", routingKey: "camunda", body: body);
+        channel.BasicPublish(exchange: "", routingKey: "camundaTask", body: body);
     }
 }

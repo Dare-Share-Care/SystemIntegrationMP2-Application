@@ -1,4 +1,5 @@
 using RabbitMQ.Implementations;
+using RabbitMQ.Producers;
 
 var policyName = "AllowOrigin";
 
@@ -21,7 +22,8 @@ builder.Services.AddCors(options =>
 });
 
 //RabbitMQ Producers
-builder.Services.AddSingleton<IMessageProducer, CamundaProducer>();
+builder.Services.AddSingleton<CamundaTaskProducer>();
+builder.Services.AddSingleton<CamundaExternalTaskProducer>();
 
 var app = builder.Build();
 
