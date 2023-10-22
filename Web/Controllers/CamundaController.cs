@@ -1,5 +1,4 @@
 using Microsoft.AspNetCore.Mvc;
-using RabbitMQ.Implementations;
 using Web.Models.Dtos;
 using RabbitMQ.Producers;
 

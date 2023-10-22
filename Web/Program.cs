@@ -1,4 +1,3 @@
-using RabbitMQ.Implementations;
 using RabbitMQ.Producers;
 
 var policyName = "AllowOrigin";
