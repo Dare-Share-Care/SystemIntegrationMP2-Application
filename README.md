@@ -12,12 +12,9 @@ This application is program meant for processing and handling customer complaint
 
 The application makes use of several microservices, these services can be found here:
 
-- [CamundaExternalTask](https://github.com/Dare-Share-Care/SystemIntegrationMP2-CamundaExternalTasks)
-Sends messages to the camundaExternalTask queue.
+- [CamundaExternalTask](https://github.com/Dare-Share-Care/SystemIntegrationMP2-CamundaExternalTasks).
 - [CamundaTasks](https://github.com/Dare-Share-Care/SystemIntegrationMP2-CamundaTasks)
-Sends messages to the camundaTask queue.
 - [EmailService](https://github.com/Dare-Share-Care/SystemIntegrationMP2-EmailService)
-Sends messages to the emailsQueue queue.
 
 Each producer has a SendMessage<T> method that takes a message of type T, serializes it to JSON, and sends it to the respective RabbitMQ queue.
 
