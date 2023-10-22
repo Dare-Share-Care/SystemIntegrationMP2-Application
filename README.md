@@ -30,7 +30,9 @@ EmailController: Provides an endpoint to send emails. Uses the EmailProducer to 
 ## EIP Implementation
 We have used camunda to model our business process, and then The RabbitMQ queues (camundaExternalTask, camundaTask, and emailsQueue) act as Message Channels. These channels allow our systems to communicate with each other by sending and receiving messages.
 - Process Manager
+
   We have used camunda to model our business process. When deployed, tasks are then completed using CamundaAPI implemented as seperate services.
 
 - Producer/Subscriber
+
   We use rabbit as our Message Broker. This allows us to integrate services using message queues by forwarding and accepting messages between the producer and subscriber applications
