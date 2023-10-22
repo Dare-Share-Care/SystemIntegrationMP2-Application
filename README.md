@@ -1,9 +1,12 @@
 # SystemIntegrationMP2-Application
 ## Authors
 
-- Frederik Andersen
-- Janus Rasmussen
-- Julius Krüger
+- **Frederik Bilgrav Andersen**: cph-fa116@cphbusiness.dk
+
+- **Janus Stivang Rasmussen**: \_-_/
+
+- **Julius Krüger Madsen**: cph-jm352@cphbusiness.dk
+
 
 This project provides a simple implementation of RabbitMQ producers for sending messages related to Camunda tasks and emails. The producers are designed to serialize the messages into JSON format and send them to specific RabbitMQ queues.
 
