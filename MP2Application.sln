@@ -2,6 +2,8 @@
 Microsoft Visual Studio Solution File, Format Version 12.00
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Web", "Web\Web.csproj", "{A774008B-D885-4360-BCCD-B33B2E403716}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RabbitMQ", "RabbitMQ\RabbitMQ.csproj", "{AB7A9951-4FD5-4F1B-B30E-EC699103CCCD}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -12,5 +14,9 @@ Global
 		{A774008B-D885-4360-BCCD-B33B2E403716}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A774008B-D885-4360-BCCD-B33B2E403716}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A774008B-D885-4360-BCCD-B33B2E403716}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AB7A9951-4FD5-4F1B-B30E-EC699103CCCD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AB7A9951-4FD5-4F1B-B30E-EC699103CCCD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AB7A9951-4FD5-4F1B-B30E-EC699103CCCD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AB7A9951-4FD5-4F1B-B30E-EC699103CCCD}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
